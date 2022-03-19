@@ -29,8 +29,8 @@
             <h2>Project Description</h2>
             <p>
                 In the material manufacturing industry, 
-                surface defects can cause major issues in a material. 
-                A simple surface scratch can initiate crack propagation and cause a structure to fail, thus potentially putting human lives at risk. 
+                surface defects are an important factor in the quality of a material. 
+                In some manufacturing cases, simple surface scratch can initiate crack propagation and cause a structure to fail, thus potentially putting human lives and important asstes at risk. 
                 However, having humans inspect for defects in a product is both very expensive, inefficient, and inaccurate way to solve this problem. 
                 Using computer vision and machine learning algorithms to detect  defects in cold rolled steel, 
                 for example, is a much more accurate way to ensure that materials are produced with high quality
@@ -41,18 +41,19 @@
 
             <h2>Project Goals</h2>
             <p><strong>Machine Learning Model: </strong><br><br>
-                Train a model that can identify metal defects with >95% accuracy. 
-                Training data will only contain microscoped images of rolled metal sheets.
-                Use tensorflow sequential model to label model
+                Using Tenorflow and Keras libraries in Python, our team created a convolutional neural network containing 10 layers that transformed the data and extracted significant features from the dataset.
+                This neural network predicted the likeliness of a defect to belong to a certain defect class.
+                The data for this project was sourced from the Kaggle dataset "Metal Surface Defects Dataset".
+                We trained the model in Google Collab in order to use their cloud GPU's and share the model development with the team.
+                We expanded the dataset by using functions functions from Keras that used image rotation, different zoom ranges, and image flipping.
+                
                 <br><br>
                 <strong>Deployment:</strong><br><br>
-                Deploy a website that can allow users to upload an image in the form of PNG or JPEG, JPG and tell the user whether input is an unaccepted file type.
-                present the output of the model in a clear way, describing each defect and its effects on the metal. 
-                It should have an aesthetically pleasant appearance. 
-                Should contain a list of all the members involved and their LinkedIn profile address
+                To show our work, we decided to create a website using the Flask webframework and allow anyone to test our model.
+                Heroku was used to deploy the this website for public viewing.
                 Show CUCAI paper <br><br>
                 <strong>Technologies: </strong><br><br>
-                The website will use Flask as its framework, HTML and Bootstrap for its appearance. Javascript will be used to add functionality to the buttons and its appearance. Tensorflow will be used to create the model and the training data will be sourced from Kaggle
+                The website will use Flask as its framework, HTML and Bootstrap for its appearance. Javascript was used to add functionality to the buttons and its appearance.
                 </p>
 
         </div>
