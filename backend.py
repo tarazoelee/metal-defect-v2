@@ -4,6 +4,8 @@ from flask import Flask, render_template, request
 
 backend = Flask(__name__) #create instance of flask web application 
 
+import ModelTest;
+
 #making web pages and defining how to access the page
 @backend.route("/", methods=["GET"]) #defining path to get to main page from opening
 def home():
@@ -24,16 +26,16 @@ def backhome():
 
 @backend.route('/', methods=['POST'])
 def predict():
-    image = load_img(image_path, target_size=(224,224))
-    image = img_to_array(image)
-    image = preprocess_input(image)
-    yhat = model.predict(image)
-    label = decode_predictions(yhat)
-    label=label[0][0]
+    
+    ModelTest.method(); #calling method function from ModelTest, should print prediction when clicked 
 
-    classification ='%s (%.2f%%)' % (label[1],label[2]*100)
-
-    return render_template('index.html', prediction=classification)
+    #image = load_img(image_path, target_size=(224,224))
+    #image = img_to_array(image)
+    #image = preprocess_input(image)
+    #yhat = model.predict(image)
+    #label = decode_predictions(yhat)
+    #label=label[0][0]
+    return render_template('defects.html', prediction=classification)
 
 
 #now running the python file 
