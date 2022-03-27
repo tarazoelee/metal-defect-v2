@@ -168,4 +168,21 @@ nav a.active {
   align-content: center;
 }
 
+.predicted-text{
+  text-align: center;
+  padding-top: 10%;
+  font-size: 30px;
+}
+
+.predicted-text2{
+  text-align: center;
+  padding-top: 3%;
+  font-size: 30px;
+}
+
+.after-predict{
+  background-color: #fffde0;
+  margin-top: 10%;
+  padding-bottom: 30%;
+}
 

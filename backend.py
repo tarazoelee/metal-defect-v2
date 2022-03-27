@@ -1,10 +1,11 @@
+from os import access
 from flask import Flask, render_template, request
 
 #render template allows us to pull in html file template 
 
 backend = Flask(__name__) #create instance of flask web application 
 
-import ModelTest;
+#import ModelTest;
 
 #making web pages and defining how to access the page
 @backend.route("/", methods=["GET"]) #defining path to get to main page from opening
@@ -27,7 +28,8 @@ def backhome():
 @backend.route('/', methods=['POST'])
 def predict():
     
-    ModelTest.method(); #calling method function from ModelTest, should print prediction when clicked 
+    print("Hello");
+    #ModelTest.method(); #calling method function from ModelTest, should print prediction when clicked 
 
     #image = load_img(image_path, target_size=(224,224))
     #image = img_to_array(image)
@@ -35,7 +37,10 @@ def predict():
     #yhat = model.predict(image)
     #label = decode_predictions(yhat)
     #label=label[0][0]
-    return render_template('defects.html', prediction=classification)
+
+    classification = 5; #setting arbitrary value for model output 
+    accuracyamount= 10;
+    return render_template('defect.html', prediction = classification, accuracy = accuracyamount)
 
 
 #now running the python file 

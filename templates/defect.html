@@ -29,13 +29,14 @@
     </div>
 
 
+    <div class ="after-predict">
     <!-- adding text only if we pass a prediction-->
 
-    {% if prediction %}
-        <p class="text-center">Image is a {{prediction}}</p>
+    {% if prediction%}
+        <p class="predicted-text">The defect is a class: {{prediction}}</p>
+        <p class="predicted-text2">The accuracy of the prediction is:  {{accuracy}} %</p>
     {% endif %}
 
-  
-
+    </div>
     </body>
 </html>
